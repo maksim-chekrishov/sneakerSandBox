@@ -1,0 +1,16 @@
+{
+  "name": "sneaker-js",
+  "version": "0.0.1",
+  "description": "sneaker-js sandbox",
+  "author": {
+    "name": "Maksim Chekrishov",
+    "email": "maksim.chekrishov@gmail.com"
+  },
+  "license": "MIT",
+
+  "dependencies": {
+
+  },
+  "devDependencies": {
+  }
+}
