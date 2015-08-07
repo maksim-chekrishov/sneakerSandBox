@@ -3,6 +3,10 @@
  * Created by m.chekryshov on 01.08.15.
  */
 
+var utils = require('../sneakerUtils');
+
+module.exports = SneakerReport;
+
 function SneakerReport (options) {
     utils.overwriteProperties(this, options);
 }
@@ -18,6 +22,18 @@ SneakerReport.prototype.sessionDuration = 0;
  * @type {string}
  */
 SneakerReport.prototype.referer = '';
+
+/**
+ * URL of the document
+ * @type {string}
+ */
+SneakerReport.prototype.pageUrl = '';
+
+/**
+ * URL of source script
+ * @type {string}
+ */
+SneakerReport.prototype.sourceUrl = '';
 
 /**
  * Report extra data
@@ -54,6 +70,7 @@ SneakerReport.prototype.level = '';
  * @type {string}
  */
 SneakerReport.prototype.lineNumber = '';
+
 
 
 

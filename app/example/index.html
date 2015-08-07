@@ -2,28 +2,49 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title></title>
 </head>
-<body style="padding: 200px">
-    <button class="js-unhandled-error-button">
-        Unhandled error
-    </button>
-    <br>
-    <button class="js-handled-error-button">
-        Handled error
-    </button>
-    <br>
-    <button class="js-wrapped-method-error-button">
-        Error in wrapped method
-    </button>
+<body>
+<div style="padding: 10% 30%; ">
+    <div style="width: 50%; display: inline-block;">
+        <button class="js-unhandled-error-button">
+            Unhandled error
+        </button>
+        <br/>
+        <button class="js-handled-error-button">
+            Handled error
+        </button>
+        <br/>
+        <button class="js-wrapped-method-error-button">
+            Error in wrapped method
+        </button>
+    </div>
+    <div style="width: 50%;float: right;">
+        <button class="js-error-button">
+            Custom error
+        </button>
+        <br/>
+        <button class="js-warning-button">
+            Warning
+        </button>
+        <br/>
+        <button class="js-info-button">
+            Info
+        </button>
+    </div>
+</div>
 </body>
 
 <!--TODO: replace with bundle-->
-<script src="src/dataObjects/sneakerEvents.js"></script>
-<script src="src/dataObjects/reportLevel.js"></script>
-<script src="src/sneakerUtils.js"></script>
-<script src="src/dataObjects/sneakerReport.js"></script>
-<script src="src/sneaker.js"></script>
+<script src="../dest/sneaker.js"></script>
+
+<script>
+    Sneaker.init({
+        //сatchUncaught: true,
+        debug: true
+    });
+</script>
 
 <script src="libs/jquery-1.11.3.min.js"></script>
 <script src="libs/underscore.js"></script>

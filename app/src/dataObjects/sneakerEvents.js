@@ -8,7 +8,7 @@
  * @readonly
  * @enum {string}
  */
-var sneakerEvents = {
+module.exports = {
     LOG: 'log',
     SEND: 'send',
     SEND_ERROR: 'sendError',

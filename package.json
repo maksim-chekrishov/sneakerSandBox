@@ -7,10 +7,13 @@
     "email": "maksim.chekrishov@gmail.com"
   },
   "license": "MIT",
-
   "dependencies": {
-
+    "tracekit": "^0.2.1"
   },
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-notify": "^2.2.0",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

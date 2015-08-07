@@ -8,7 +8,7 @@
  * @readonly
  * @enum {string}
  */
-var errorLevel = {
+module.exports = {
     ERROR:'error',
     WARN:'warn',
     INFO: 'info'
