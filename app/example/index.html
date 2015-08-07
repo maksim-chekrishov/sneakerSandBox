@@ -5,49 +5,69 @@
     <meta name="viewport" content="width=device-width">
     <title></title>
 </head>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+<link rel="stylesheet" href="index.css">
 <body>
-<div style="padding: 10% 30%; ">
-    <div style="width: 50%; display: inline-block;">
-        <button class="js-unhandled-error-button">
-            Unhandled error
-        </button>
-        <br/>
-        <button class="js-handled-error-button">
-            Handled error
-        </button>
-        <br/>
-        <button class="js-wrapped-method-error-button">
-            Error in wrapped method
-        </button>
-    </div>
-    <div style="width: 50%;float: right;">
-        <button class="js-error-button">
-            Custom error
-        </button>
-        <br/>
-        <button class="js-warning-button">
-            Warning
-        </button>
-        <br/>
-        <button class="js-info-button">
-            Info
-        </button>
-    </div>
+<div class="content">
+
+    <h1>Click to run</h1>
+
+        <pre class="js-unhandled-error-button">
+            <code>
+                throw new Error('Unhandled Error');
+            </code>
+        </pre>
+        <pre class="js-handled-error-button">
+            <code>
+                try {
+                    throw new Error('Some handled Error');
+                } catch (e) {
+                    Sneaker.handleException(e);
+                }
+            </code>
+        </pre>
+
+        <pre class="js-wrapped-method-error-button">
+            <code>
+                function funcToWrap() {
+                    throw new Error('Error from wrapped method');
+                }
+                Sneaker.callThrough(funcToWrap)
+            </code>
+        </pre>
+        <pre class="js-error-button">
+            <code>
+                Sneaker.error('Custom error');
+            </code>
+        </pre>
+        <pre class="js-warning-button">
+            <code>
+                Sneaker.warn('Some warning info');
+            </code>
+        </pre>
+        <pre class="js-info-button">
+            <code>
+                Sneaker.info('Some information');
+            </code>
+        </pre>
+        <pre class="js-ajax-error-button">
+            <code>
+                $.post('failed-request.com', {data: 'data'});
+            </code>
+        </pre>
 </div>
 </body>
 
-<!--TODO: replace with bundle-->
 <script src="../dest/sneaker.js"></script>
 
 <script>
     Sneaker.init({
-        //сatchUncaught: true,
-        debug: true
+        //        debug: true,
+        //        reportUrl: 'http:/1.ru'
     });
 </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
 
-<script src="libs/jquery-1.11.3.min.js"></script>
-<script src="libs/underscore.js"></script>
+<script src="appBundle.js"></script>
 
-<script src="app.js"></script>
 </html>
