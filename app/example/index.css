@@ -1,0 +1,9 @@
+.content{
+    padding: 1% 30%;
+}
+pre{
+    cursor: pointer;
+}
+.cursor-default{
+    cursor: default;
+}
