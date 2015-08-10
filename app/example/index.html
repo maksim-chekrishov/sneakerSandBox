@@ -62,7 +62,7 @@
                 var reportableRequest = Sneaker.wrap(sendRequest);
 
                 try{
-                    // Send report
+                    // sneaker will create a report
                     reportableRequest();
                 }catch (e){
                     pendingRequestsQueue.push(currentRequest);
@@ -80,7 +80,7 @@
                 }
 
                 try{
-                    // Send report
+                    // sneaker will create a report
                     Sneaker.callThrough(sendRequest);
                 }catch (e){
                     pendingRequestsQueue.push(currentRequest);
@@ -135,8 +135,7 @@
             <code>
                 function customLogMethod(sneakerReport, extraData) {
                     // log some additional information
-                    console.log('App[CustomLogger]: Sneaker report:');
-                    console.dir(sneakerReport);
+                    console.log('App[CustomLogger]: Session duration ' + sneakerReport.sessionDuration);
                 }
 
                 Sneaker.on('log', customLogMethod);
